@@ -71,7 +71,7 @@ L’architecture logicielle mise en place est **MVC** *(Model View Controller)*.
 
 ## Environnement
 
-Ce projet est réalisé en **Java 11** *(OpenJDK)*, **JakartaEE 8** et **Tomcat 8.XXX**.
+Ce projet est réalisé en **Java 11** *(OpenJDK)*, **JakartaEE 8** et **Tomcat 9.0.31**.
 Il utilise l'outil **Maven** en version 3.6.2.
 
 ### Exécution

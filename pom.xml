@@ -33,6 +33,7 @@
         <version.json.yasson>1.0.6</version.json.yasson> 
         
         <!-- Version des extensions -->
+        <version.duplicate-finder-maven-plugin>1.4.0</version.duplicate-finder-maven-plugin>
         <version.maven-compiler-plugin>3.8.1</version.maven-compiler-plugin>
         <version.maven-war-plugin>3.2.3</version.maven-war-plugin>
         <version.maven-install-plugin>2.5.2</version.maven-install-plugin>
@@ -399,37 +400,14 @@
         </resources>
         
         <plugins>
-            
-            <!--
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-toolchains-plugin</artifactId>
-                <version>3.0.0</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>toolchain</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <toolchains>
-                        <jdk>
-                            <version>${version.java}</version>
-                            <vendor>oracle</vendor>
-                        </jdk>
-                    </toolchains>
-                </configuration>
-            </plugin>
-            -->
-            
+                        
             <!--
                 Extension permettant de vérifier la présence de classe en doublon.
             -->
             <plugin>
                 <groupId>org.basepom.maven</groupId>
                 <artifactId>duplicate-finder-maven-plugin</artifactId>
-                <version>1.4.0</version>
+                <version>${version.duplicate-finder-maven-plugin}</version>
                 <executions>
                     <execution>
                         <id>default</id>
@@ -464,7 +442,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>${version.maven-compiler-plugin}</version>
                 <configuration>
                     <source>${version.java}</source>
                     <target>${version.java}</target>
