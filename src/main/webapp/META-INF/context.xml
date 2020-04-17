@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/whiteapp">
+          
+    <Transaction 
+        factory="com.arjuna.ats.internal.jta.transaction.arjunacore.UserTransactionImple" 
+    />
+          
+    <Resource 
+        name="TransactionManager" 
+        type="javax.transaction.TransactionManager"
+        factory="com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionManagerImple"
+    />
+    
+    <Resource 
+        name="TransactionSynchronizationRegistry" 
+        factory="com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionSynchronizationRegistryImple"
+        type="javax.transaction.TransactionSynchronizationRegistry"
+    />
+                   
+    <Resource 
+        name="BeanManager"  
+        auth="Container"  
+        type="javax.enterprise.inject.spi.BeanManager"  
+        factory="org.jboss.weld.resources.ManagerObjectFactory"
+    />
+        
+    <Resource 
+        name="jdbc/WhiteApp" 
+        auth="Container" 
+        driverClassName="org.h2.Driver" 
+        type="javax.sql.DataSource" 
+        username="sa"
+        password="sa" 
+        url="jdbc:h2:mem:whiteapp" 
+    />
+    
+</Context>
