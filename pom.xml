@@ -176,7 +176,7 @@
             </exclusions>
         </dependency>
         
-        <!-- JTA 1.2 -->
+        <!-- JTA 1.3 -->
         <dependency>
             <!-- Uber JAR -->
             <groupId>org.jboss.narayana.jta</groupId>
@@ -219,7 +219,7 @@
             <scope>compile</scope>
         </dependency>
                     
-        <!-- JAX-RS 2.0 -->
+        <!-- JAX-RS 2.1 -->
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-core</artifactId>

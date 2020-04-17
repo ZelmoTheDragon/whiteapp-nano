@@ -1,5 +1,6 @@
 package com.github.zelmothedragon.whiteapp.model;
 
+import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Disposes;
 import javax.enterprise.inject.Produces;
@@ -16,16 +17,25 @@ import javax.persistence.Persistence;
 public class ContextResource {
 
     /**
-     * Fabrique de destionnaire d'entité.
+     * Fabrique de destionnaire d'entité. Dans ce conteneur de <i>Servlet</i>,
+     * il n'est pas possible d'injecter directement la classe
+     * <code>EntityManager</code> avec l'annotation
+     * <code>@PersistenceContext</code>.
      */
-    private EntityManagerFactory ENTITY_MANAGER_FACTORY = Persistence.createEntityManagerFactory("whiteapp-pu");
+    private EntityManagerFactory entityManagerFactory;
 
     /**
-     * Constructeur par défaut. Requis pour le fonctionnement des technologies
-     * de Java EE.
+     * Constructeur d'injection.Requis pour le fonctionnement des technologies
+     * de Jakarta EE.
      */
     public ContextResource() {
         // Ne pas appeler explicitement
+    }
+
+    @PostConstruct
+    protected void init() {
+        // Voir le fichier 'persistence.xml' pour trouver le nom de l'unité de persistance.
+        this.entityManagerFactory = Persistence.createEntityManagerFactory("whiteapp-pu");
     }
 
     /**
@@ -35,7 +45,7 @@ public class ContextResource {
      */
     @Produces
     public EntityManager createEntityManager() {
-        return ENTITY_MANAGER_FACTORY.createEntityManager();
+        return entityManagerFactory.createEntityManager();
     }
 
     /**

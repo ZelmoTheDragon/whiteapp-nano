@@ -9,7 +9,7 @@ import javax.inject.Named;
 import javax.transaction.Transactional;
 
 /**
- * Contrôleur principal pour une entité métier.
+ * Contrôleur web pour une entité métier.
  *
  * @author MOSELLE Maxime
  */
@@ -31,8 +31,8 @@ public class CustomerController implements Serializable {
     private Customer entity;
 
     /**
-     * Constructeur par défaut. Requis pour le fonctionnement des technologies
-     * de Java EE.
+     * Constructeur d'injection.Requis pour le fonctionnement des technologies
+     * de Jakarta EE.
      */
     public CustomerController() {
         // Ne pas appeler explicitement

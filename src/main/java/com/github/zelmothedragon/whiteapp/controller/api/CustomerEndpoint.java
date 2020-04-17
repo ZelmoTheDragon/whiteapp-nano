@@ -9,13 +9,23 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+/**
+ * Contrôleur REST pour une entité métier.
+ *
+ * @author MOSELLE Maxime
+ */
 @RequestScoped
 @Path("/customer")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class CustomerEndpoint {
 
+    /**
+     * Constructeur d'injection.Requis pour le fonctionnement des technologies
+     * de Jakarta EE.
+     */
     public CustomerEndpoint() {
+        // Ne pas appeler explicitement
     }
 
     @GET

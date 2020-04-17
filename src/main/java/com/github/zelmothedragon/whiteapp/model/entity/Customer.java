@@ -86,8 +86,8 @@ public class Customer extends Model {
     private LocalDate birthDate;
 
     /**
-     * Constructeur par défaut. Requis pour le fonctionnement des technologies
-     * de Java EE.
+     * Constructeur d'injection.Requis pour le fonctionnement des technologies
+     * de Jakarta EE.
      */
     public Customer() {
         this.id = UUID.randomUUID();

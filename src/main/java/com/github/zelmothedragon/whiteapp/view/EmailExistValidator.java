@@ -20,7 +20,7 @@ public class EmailExistValidator implements Validator<String> {
 
     /**
      * Constructeur d'injection.Requis pour le fonctionnement des technologies
-     * de Java EE.
+     * de Jakarta EE.
      */
     public EmailExistValidator() {
         // Ne pas appeler explicitement.

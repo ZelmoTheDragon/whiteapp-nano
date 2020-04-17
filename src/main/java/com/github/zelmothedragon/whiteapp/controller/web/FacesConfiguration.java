@@ -13,8 +13,8 @@ import javax.faces.annotation.FacesConfig;
 public class FacesConfiguration {
 
     /**
-     * Constructeur par défaut. Requis pour le fonctionnement des technologies
-     * de Java EE.
+     * Constructeur d'injection.Requis pour le fonctionnement des technologies
+     * de Jakarta EE.
      */
     public FacesConfiguration() {
         // Ne pas appeler explicitementF

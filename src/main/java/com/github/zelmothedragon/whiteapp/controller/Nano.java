@@ -10,15 +10,31 @@ import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 import org.jboss.logging.Logger;
 
+/**
+ * Initialisation/Destruction du contexte applicatif.
+ *
+ * @author MOSELLE Maxime
+ */
 @WebListener
 public class Nano implements ServletContextListener {
 
+    /**
+     * Journalisation.
+     */
     private static final Logger LOG = Logger.getLogger(Nano.class);
 
+    /**
+     * Gestionnaire d'entité.
+     */
     @Inject
     private transient EntityManager em;
 
+    /**
+     * Constructeur d'injection.Requis pour le fonctionnement des technologies
+     * de Jakarta EE.
+     */
     public Nano() {
+        // Ne pas appeler explicitement
     }
 
     @Override

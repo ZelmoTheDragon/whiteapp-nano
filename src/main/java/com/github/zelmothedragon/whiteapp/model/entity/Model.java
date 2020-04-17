@@ -20,8 +20,8 @@ public abstract class Model implements Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * Constructeur par défaut. Requis pour le fonctionnement des technologies
-     * de Java EE.
+     * Constructeur d'injection.Requis pour le fonctionnement des technologies
+     * de Jakarta EE.
      */
     protected Model() {
         // Ne pas appeler explicitement

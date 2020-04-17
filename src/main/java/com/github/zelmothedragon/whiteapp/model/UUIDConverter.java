@@ -14,8 +14,8 @@ import javax.persistence.Converter;
 public class UUIDConverter implements AttributeConverter<UUID, String> {
 
     /**
-     * Constructeur par défaut. Requis pour le fonctionnement des technologies
-     * de Java EE.
+     * Constructeur d'injection.Requis pour le fonctionnement des technologies
+     * de Jakarta EE.
      */
     public UUIDConverter() {
         // Ne pas appeler explicitement

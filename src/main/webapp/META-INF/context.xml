@@ -1,29 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+    POUR DÉVELOPPEMENT UNIQUEMENT
+    
+    Fichier de déploiement spécifique au serveur d'application Tomcat 8.XXX.
+    Déclare les ressources du serveur.
+-->
 <Context path="/whiteapp">
           
+    <!-- Prise en charge des transactions JTA -->
     <Transaction 
         factory="com.arjuna.ats.internal.jta.transaction.arjunacore.UserTransactionImple" 
     />
           
+    <!-- Prise en charge des transactions JTA -->
     <Resource 
         name="TransactionManager" 
         type="javax.transaction.TransactionManager"
         factory="com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionManagerImple"
     />
     
+    <!-- Prise en charge des transactions JTA -->
     <Resource 
         name="TransactionSynchronizationRegistry" 
         factory="com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionSynchronizationRegistryImple"
         type="javax.transaction.TransactionSynchronizationRegistry"
     />
                    
+    <!-- Prise en charge du conteneur d'injection CDI -->
     <Resource 
         name="BeanManager"  
         auth="Container"  
         type="javax.enterprise.inject.spi.BeanManager"  
         factory="org.jboss.weld.resources.ManagerObjectFactory"
     />
-        
+    
+    <!-- Ressource pour la connexion à la base de données -->
     <Resource 
         name="jdbc/WhiteApp" 
         auth="Container" 
