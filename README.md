@@ -8,9 +8,10 @@ une licence de logicielle libre compatible avec la **GNU GPL**.
 > En savoir plus sur la licence [CeCILL](http://cecill.info/index.fr.html)
 
 Tomcat est un serveur d'application minimaliste.
-Il ne supporte nativement que peut de technologie *Jakarta EE*.
+Il ne supporte nativement que peut de technologies *Jakarta EE*.
 Le but de ce projet est de construire une base *Maven* pour portée le plus de brique *Jakarta EE*.
 Tout en résolvant les problèmes de dépendances liés aux doublons de classes.
+Bien sûr toutes les briques ne sont pas nécessaires dans la plus part des cas. 
 
 ## Technologie
 
@@ -51,7 +52,7 @@ Portage des briques *Jakarta EE*:
 * [x] JSON-B 1.0 (Yasson)
 * [x] Security 1.0 (Soteria)
 
-> À amender avec les mise à jour.
+> À amender avec les mises à jour.
 
 ## Module
 
