@@ -3,9 +3,11 @@
 Exemple de portage de la plateforme **Jakarta EE** sur **Tomcat**.
 
 Ce projet est sous licence **CeCILL** (**CE**A **C**NRS **I**NRIA **L**ogiciel **L**ibre),
-une licence de logicielle libre compatible avec la **GNU GPL**.
+une licence de logiciel libre compatible avec la **GNU GPL**.
 
 > En savoir plus sur la licence [CeCILL](http://cecill.info/index.fr.html)
+
+## Objectifs
 
 Tomcat est un serveur d'application minimaliste.
 Il ne supporte nativement que peut de technologies *Jakarta EE*.
