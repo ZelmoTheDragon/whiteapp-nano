@@ -25,7 +25,7 @@
         <version.cdi.weld>3.1.3.Final</version.cdi.weld>
         <version.jpa.hibernate>5.4.12.Final</version.jpa.hibernate>
         <version.jta.narayana>5.10.4.Final</version.jta.narayana>
-        <version.bv.hibernate>6.1.2.Final</version.bv.hibernate>
+        <version.bv.hibernate>6.1.5.Final</version.bv.hibernate>
         <version.jaxrs.resteasy>4.5.2.Final</version.jaxrs.resteasy>
         <version.security.soteria>1.0.1</version.security.soteria>
         <version.jsf.mojarra>2.4.0</version.jsf.mojarra>
