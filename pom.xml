@@ -17,7 +17,7 @@
         <!-- Plateforme -->
         <version.java>11</version.java>
         <version.tomcat>9.0.31</version.tomcat>
-        <version.h2>1.4.200</version.h2> 
+        <version.h2>2.0.206</version.h2> 
         
         <!-- Jakarta EE 8 API -->
         
